@@ -10,8 +10,6 @@ pub fn process(path: PathBuf) -> Result<u128> {
 
     let max_value = contents
         .split("\n\n")
-        .collect::<Vec<_>>()
-        .into_iter()
         .fold(vec![], |mut result, v| {
             let temp_vector = v
                 .split('\n')
